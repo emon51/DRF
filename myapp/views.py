@@ -52,7 +52,7 @@ from .models import Product
 from .serializers import ProductSerializer
 
 # List all products or create a new product
-class ProductListCreateView(generics.ListAPIView):
+class ProductListCreateView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
